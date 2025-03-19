@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves **99.96% validation accuracy** with Vision Transformer architecture.
+
 🍇 Class Samples
 ## Palm Oil Fruit Classification
 #### Empty Bunch
