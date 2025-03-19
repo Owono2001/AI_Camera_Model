@@ -1,113 +1,126 @@
-🌴 AI_Camera_Model - Palm Oil Fruit Ripeness Classifier 📸
+# Palm Oil Fruit Ripeness Classifier 🌴📸
 
-A vision-based AI model for classifying palm oil fruit ripeness using RGB images.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.0-red.svg)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This model can be deployed on a standard camera or webcam for real-time classification.
+A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves 99.96% validation accuracy with Vision Transformer architecture.
 
-🚀 Features
+![Demo](media/image1.png)
+*Real-time inference demonstration*
 
-🎥 Real-time Classification: Works with a webcam for live predictions.
+## Table of Contents
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Model Architecture](#-model-architecture)
+- [Raspberry Pi Setup](#-raspberry-pi-setup)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-🎯 High Accuracy: Vision Transformer model achieving 99.96% validation accuracy.
+## 🌟 Features
+- � High-accuracy Vision Transformer model
+- 🕒 Real-time classification via webcam
+- 📱 Raspberry Pi compatible
+- 📊 Three-class classification:
+  - 🟠 Ripe Bunch
+  - 🟢 Unripe Bunch
+  - ⚫ Empty Bunch
+- 🔄 ONNX model conversion support
 
-🏷️ Three Classification Categories:
+## 🛠️ Installation
 
-✅ Ripe
+### Prerequisites
+- Python 3.8+
+- Webcam-enabled device
+- PyTorch 2.0.0
 
-❌ Unripe
+### Setup
+```bash
+# Clone repository
+git clone https://github.com/Owono2001/AI_Model_Palm_Oil_Fruit.git
+cd AI_Model_Palm_Oil_Fruit
 
-🍂 Empty Bunch
-
-⚡ Easy-to-use Inference Script for quick classification.
-
-📋 Requirements
-
-🐍 Python 3.8+
-
-📷 Webcam (for real-time inference)
-
-🔥 PyTorch 2.0.0+
-
-🔧 Installation
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/Owono2001/AI_Camera_Model.git
-
-cd AI_Camera_Model
-
-2️⃣ Create & Activate Virtual Environment
-
-🖥️ Windows
-
+# Create and activate virtual environment
 python -m venv venv
 
+Activation:
+
+# Windows
 .\venv\Scripts\activate
 
-🐧 Linux/Mac
+# Linux/MacOS
+source venv/bin/activate
 
-python -m venv venv
 
-venv/bin/activate
-
-3️⃣ Install Dependencies
-
+# Install dependencies
 pip install -r requirements.txt
 
-🎯 Usage
-
-🔍 Real-time Inference
-
-Run the following script to start real-time classification:
+🚀 Usage
+Real-time Inference
 
 python Inference/DoClassify_RGB.py
 
-Instructions:
+    Point camera at palm fruit bunches
 
-📸 Point your camera at palm fruit bunches.
+    Press q to exit
 
-⏹️ Press 'q' to quit.
-
-🎓 Training
-
-To train the model on your dataset:
-
+Training
+```bash
 python Training/Train_RGB.py
 
-🔄 Model Conversion (to ONNX)
+Model Conversion (ONNX)
 
 python Save_Models/scripts/convert_onnx.py
 
+📐 Model Architecture
+python
+
+ViT(
+  (transformer): Sequential(
+    (0): TransformerEncoderLayer(...)
+    (1-11): 11x TransformerEncoderLayer(...)
+  )
+  (classifier): Linear(in_features=768, out_features=3, bias=True)
+)
+
+Vision Transformer with 12 encoder layers
 🍓 Raspberry Pi Setup
 
-To deploy the model on Raspberry Pi, follow these steps:
-
-🏗️ Install ARM-Compatible PyTorch
-
+# Install ARM-compatible PyTorch
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
-🔧 Install Additional Dependencies
-
+# Install dependencies
 sudo apt install v4l-utils python3-pyopencl
-
 pip3 install onnxruntime opencv-python-headless
 
 🤝 Contributing
 
-We welcome contributions! Follow these steps:
+We welcome contributions! Please follow this workflow:
 
-1️⃣ Fork the repository
-2️⃣ Create a feature branch
-3️⃣ Submit a pull request
+    Fork the repository
+
+    Create your feature branch:
+    
+    git checkout -b feature/your-feature
+
+    Commit changes:
+    
+    git commit -m 'Add awesome feature'
+
+    Push to branch:
+    
+    git push origin feature/your-feature
+
+    Open a pull request
 
 📜 License
 
-This project is licensed under the MIT License.
+MIT License - see LICENSE for details
+🙏 Acknowledgments
 
-🙏 Acknowledgements
+    Vision Transformer architecture
 
-🏗️ Vision Transformer Architecture
+    PyTorch framework
 
-🔥 PyTorch Framework
-
-🎥 OpenCV for Camera Integration
+    OpenCV camera integration
