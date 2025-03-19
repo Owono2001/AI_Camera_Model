@@ -33,6 +33,7 @@ This model can be deployed on a standard camera or webcam for real-time classifi
 1️⃣ Clone the Repository
 
 git clone https://github.com/Owono2001/AI_Camera_Model.git
+
 cd AI_Camera_Model
 
 2️⃣ Create & Activate Virtual Environment
@@ -40,12 +41,14 @@ cd AI_Camera_Model
 🖥️ Windows
 
 python -m venv venv
+
 .\venv\Scripts\activate
 
 🐧 Linux/Mac
 
 python -m venv venv
-source venv/bin/activate
+
+venv/bin/activate
 
 3️⃣ Install Dependencies
 
@@ -86,6 +89,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 🔧 Install Additional Dependencies
 
 sudo apt install v4l-utils python3-pyopencl
+
 pip3 install onnxruntime opencv-python-headless
 
 🤝 Contributing
