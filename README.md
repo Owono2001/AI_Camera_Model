@@ -19,5 +19,6 @@ A vision-based AI model for classifying palm oil fruit ripeness using RGB images
 
 1. Clone repository:
 ```bash
-git clone https://github.com/Owono2001/AI_Model_Palm_Oil_Fruit.git
-cd AI_Model_Palm_Oil_Fruit
+git clone https://github.com/Owono2001/AI_Camera_Model.git
+cd AI_Camera_Model
+
