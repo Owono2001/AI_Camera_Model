@@ -2,7 +2,9 @@ AI_Camera_Model
 
 🌴 Palm Oil Fruit Ripeness Classifier 📸
 
-A vision-based AI model for classifying palm oil fruit ripeness using RGB images. This model can be deployed on a standard camera or webcam for real-time classification.
+A vision-based AI model for classifying palm oil fruit ripeness using RGB images.
+
+This model can be deployed on a standard camera or webcam for real-time classification.
 
 🚀 Features
 
@@ -18,7 +20,7 @@ Three Classification Categories:
 
 🍂 Empty Bunch
 
-Easy-to-Use Inference Script for quick classification.
+Easy-to-use inference Script for quick classification.
 
 📋 Requirements
 
@@ -75,26 +77,10 @@ python Training/Train_RGB.py
 
 python Save_Models/scripts/convert_onnx.py
 
-📂 Project Structure
-
-AI_Model_Palm_Oil_Fruit/
-├── Data/
-│   └── RGB/               # Training images
-│       ├── empty_bunch
-│       ├── overripe
-│       ├── ripe
-│       ├── rotten
-│       └── underripe
-├── Inference/             # Real-time classification scripts
-├── Models/                # Model architectures
-├── Training/              # Training scripts
-├── Save_Models/           # Model saving/conversion
-├── requirements.txt       # Dependencies
-└── config.py              # Configuration settings
 
 🍓 Raspberry Pi Setup
 
-For deploying the model on Raspberry Pi, follow these steps:
+To deploy the model on Raspberry Pi, follow these steps:
 
 Install ARM-Compatible PyTorch
 
