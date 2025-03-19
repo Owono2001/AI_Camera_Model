@@ -4,10 +4,19 @@
 [![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.0-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves 99.96% validation accuracy with Vision Transformer architecture.
+A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves **99.96% validation accuracy** with Vision Transformer architecture.
+🍇 Class Samples
+## Palm Oil Fruit Classification
+#### Empty Bunch
+![Empty Bunch](./Images/empty_bunch.jpg)
 
-![Demo](media/image1.png)
-*Real-time inference demonstration*
+#### Ripe Fruit
+![Ripe](./Images/ripes.jpg)
+
+#### Unripe Fruit
+![Unripe](./Images/unripe.jpg)
+
+*Sample classifications: Ripe (🟠), Unripe (🟢), Empty (⚫)*
 
 ## Table of Contents
 - [Features](#-features)
@@ -15,11 +24,13 @@ A vision-based AI model for classifying palm oil fruit ripeness using RGB images
 - [Usage](#-usage)
 - [Model Architecture](#-model-architecture)
 - [Raspberry Pi Setup](#-raspberry-pi-setup)
+- [File Structure](#-file-structure)
 - [Contributing](#-contributing)
 - [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
 ## 🌟 Features
-- � High-accuracy Vision Transformer model
+- 🧠 High-accuracy Vision Transformer model (99.96% val accuracy)
 - 🕒 Real-time classification via webcam
 - 📱 Raspberry Pi compatible
 - 📊 Three-class classification:
@@ -44,37 +55,31 @@ cd AI_Model_Palm_Oil_Fruit
 # Create and activate virtual environment
 python -m venv venv
 
-Activation:
-
+# Activation
 # Windows
 .\venv\Scripts\activate
 
 # Linux/MacOS
 source venv/bin/activate
 
-
 # Install dependencies
 pip install -r requirements.txt
 
 🚀 Usage
 Real-time Inference
-
+y
 python Inference/DoClassify_RGB.py
+Point the camera at palm fruit bunches
 
-    Point camera at palm fruit bunches
-
-    Press q to exit
+Press q to exit
 
 Training
-```bash
-python Training/Train_RGB.py
 
+python Training/Train_RGB.py
 Model Conversion (ONNX)
 
 python Save_Models/scripts/convert_onnx.py
-
 📐 Model Architecture
-python
 
 ViT(
   (transformer): Sequential(
@@ -83,9 +88,9 @@ ViT(
   )
   (classifier): Linear(in_features=768, out_features=3, bias=True)
 )
-
 Vision Transformer with 12 encoder layers
-🍓 Raspberry Pi Setup
+
+� Raspberry Pi Setup
 
 # Install ARM-compatible PyTorch
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -95,32 +100,29 @@ sudo apt install v4l-utils python3-pyopencl
 pip3 install onnxruntime opencv-python-headless
 
 🤝 Contributing
-
 We welcome contributions! Please follow this workflow:
 
-    Fork the repository
+Fork the repository
 
-    Create your feature branch:
-    
-    git checkout -b feature/your-feature
+Create your feature branch:
 
-    Commit changes:
-    
-    git commit -m 'Add awesome feature'
+git checkout -b feature/your-feature
 
-    Push to branch:
-    
-    git push origin feature/your-feature
+Commit changes:
 
-    Open a pull request
+git commit -m 'Add awesome feature'
+
+Push to branch:
+
+git push origin feature/your-feature
+Open a pull request
 
 📜 License
-
 MIT License - see LICENSE for details
+
 🙏 Acknowledgments
+Vision Transformer architecture
 
-    Vision Transformer architecture
+PyTorch framework
 
-    PyTorch framework
-
-    OpenCV camera integration
+OpenCV camera integration
