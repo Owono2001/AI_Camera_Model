@@ -6,6 +6,11 @@
 
 A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves **99.96% validation accuracy** with Vision Transformer architecture.
 
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Owono2001&style=flat-square&color=7DF9FF" alt="Profile Views">
+  <p style="font-family: 'Space Mono', monospace; color: #7DF9FF; font-size: 1.2em;">Your visit sparks innovation! 🔥</p>
+</div>
+
 🍇 Class Samples
 ## Palm Oil Fruit Classification
 #### Empty Bunch
