@@ -27,11 +27,6 @@ The model classifies palm oil fruit bunches into three categories:
 * [🛠️ Installation](#️-installation)
 * [🚀 Usage](#-usage)
 * [📐 Model Architecture](#-model-architecture)
-* [📱 Raspberry Pi Setup](#-raspberry-pi-setup)
-* [📁 File Structure](#-file-structure)
-* [🤝 Contributing](#-contributing)
-* [📜 License](#-license)
-* [🙏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -131,4 +126,3 @@ VisionTransformer(
   (norm): LayerNorm(...)
   (head): Linear(in_features=768, out_features=3, bias=True) # Classifier
 )
-
