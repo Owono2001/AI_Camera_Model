@@ -1,134 +1,134 @@
 # Palm Oil Fruit Ripeness Classifier 🌴📸
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.0-red.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.0-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Profile Views](https://komarev.com/ghpvc/?username=Owono2001&style=for-the-badge&color=brightgreen)](https://github.com/Owono2001/)
 
-A vision-based AI model for classifying palm oil fruit ripeness using RGB images. Achieves **99.96% validation accuracy** with Vision Transformer architecture.
+> A Vision Transformer (ViT) based AI model for accurately classifying the ripeness of palm oil fruit bunches (Ripe, Unripe, Empty) using standard RGB camera images. This project achieves **99.96% validation accuracy** and supports real-time inference, including deployment on Raspberry Pi.
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Owono2001&style=flat-square&color=7DF9FF" alt="Profile Views">
-  <p style="font-family: 'Space Mono', monospace; color: #7DF9FF; font-size: 1.2em;">Your visit sparks innovation! 🔥</p>
-</div>
+---
 
-🍇 Class Samples
-## Palm Oil Fruit Classification
-#### Empty Bunch
-![Empty Bunch](./Images/empty_bunch.jpg)
+## 🍇 Sample Classifications
 
-#### Ripe Fruit
-![Ripe](./Images/ripes.jpg)
+The model classifies palm oil fruit bunches into three categories:
 
-#### Unripe Fruit
-![Unripe](./Images/unripe.jpg)
+| Class       | Sample Image                     | Indicator | Description                  |
+| :---------- | :-------------------------------: | :-------: | :--------------------------- |
+| **Ripe** | ![Ripe](./Images/ripes.jpg)      | 🟠        | Ready for harvest.           |
+| **Unripe** | ![Unripe](./Images/unripe.jpg)   | 🟢        | Not yet ready for harvest.   |
+| **Empty** | ![Empty](./Images/empty_bunch.jpg)| ⚫        | Bunch with no fruit present. |
 
-*Sample classifications: Ripe (🟠), Unripe (🟢), Empty (⚫)*
+---
 
-## Table of Contents
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Model Architecture](#-model-architecture)
-- [Raspberry Pi Setup](#-raspberry-pi-setup)
-- [File Structure](#-file-structure)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
+## 📋 Table of Contents
+
+* [🌟 Features](#-features)
+* [🛠️ Installation](#️-installation)
+* [🚀 Usage](#-usage)
+* [📐 Model Architecture](#-model-architecture)
+* [📱 Raspberry Pi Setup](#-raspberry-pi-setup)
+* [📁 File Structure](#-file-structure)
+* [🤝 Contributing](#-contributing)
+* [📜 License](#-license)
+* [🙏 Acknowledgments](#-acknowledgments)
+
+---
 
 ## 🌟 Features
-- 🧠 High-accuracy Vision Transformer model (99.96% val accuracy)
-- 🕒 Real-time classification via webcam
-- 📱 Raspberry Pi compatible
-- 📊 Three-class classification:
-  - 🟠 Ripe Bunch
-  - 🟢 Unripe Bunch
-  - ⚫ Empty Bunch
-- 🔄 ONNX model conversion support
+
+* 🧠 **High Accuracy:** Leverages a Vision Transformer (ViT) model achieving **99.96% validation accuracy**.
+* 🕒 **Real-time Inference:** Classify fruit bunches instantly using a connected webcam.
+* 📱 **Raspberry Pi Compatible:** Includes setup instructions and considerations for deployment on Raspberry Pi.
+* 📊 **Three-Class Output:** Distinguishes between:
+    * 🟠 Ripe Bunch
+    * 🟢 Unripe Bunch
+    * ⚫ Empty Bunch
+* 🔄 **ONNX Export:** Provides scripts to convert the PyTorch model to ONNX format for optimized inference and cross-platform compatibility.
+
+---
 
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.8+
-- Webcam-enabled device
-- PyTorch 2.0.0
 
-### Setup
-```bash
-# Clone repository
-git clone https://github.com/Owono2001/AI_Model_Palm_Oil_Fruit.git
-cd AI_Model_Palm_Oil_Fruit
+* Python 3.8 or newer
+* A connected webcam (for real-time inference)
+* PyTorch 2.0.0 or compatible version (see `requirements.txt`)
 
-# Create and activate virtual environment
-python -m venv venv
+### Setup Steps
 
-# Activation
-# Windows
-.\venv\Scripts\activate
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Owono2001/AI_Model_Palm_Oil_Fruit.git](https://github.com/Owono2001/AI_Model_Palm_Oil_Fruit.git)
+    cd AI_Model_Palm_Oil_Fruit
+    ```
 
-# Linux/MacOS
-source venv/bin/activate
+2.  **Create and activate a virtual environment:** (Recommended)
+    ```bash
+    python -m venv venv
+    ```
+    * On **Windows**: `.\venv\Scripts\activate`
+    * On **Linux/macOS**: `source venv/bin/activate`
 
-# Install dependencies
-pip install -r requirements.txt
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-🚀 Usage
-Real-time Inference
-y
-python Inference/DoClassify_RGB.py
-Point the camera at palm fruit bunches
+---
 
-Press q to exit
+## 🚀 Usage
 
-Training
+### Real-time Inference (Webcam)
 
-python Training/Train_RGB.py
-Model Conversion (ONNX)
+1.  Ensure your virtual environment is activated and webcam is connected.
+2.  Run the classification script:
+    ```python
+    python Inference/DoClassify_RGB.py
+    ```
+3.  Point the camera towards palm oil fruit bunches. The classification result will be displayed on the video feed.
+4.  Press `q` to exit the application.
 
-python Save_Models/scripts/convert_onnx.py
-📐 Model Architecture
+### Training
 
-ViT(
-  (transformer): Sequential(
-    (0): TransformerEncoderLayer(...)
-    (1-11): 11x TransformerEncoderLayer(...)
+1.  Prepare your dataset according to the expected format (details should be added if not standard ImageFolder).
+2.  Run the training script:
+    ```python
+    python Training/Train_RGB.py
+    ```
+    *(Modify training parameters within the script or via command-line arguments if implemented).*
+
+### Model Conversion (PyTorch to ONNX)
+
+1.  Convert the trained PyTorch model (`.pth`) to ONNX format for optimized deployment:
+    ```python
+    python Save_Models/scripts/convert_onnx.py
+    ```
+    *(Ensure model paths in the script are correct).*
+
+---
+
+## 📐 Model Architecture
+
+This project utilizes the **Vision Transformer (ViT)** architecture, specifically `vit_base_patch16_224` pre-trained on ImageNet and fine-tuned for this task. The core structure involves:
+
+* **Patch Embedding:** Input images (224x224) are divided into 16x16 patches, flattened, and linearly embedded.
+* **Transformer Encoder:** A stack of 12 Transformer Encoder layers processes the sequence of patch embeddings, capturing global image context through self-attention mechanisms.
+* **Classification Head:** A final linear layer maps the processed sequence representation to the 3 output classes (Ripe, Unripe, Empty).
+
+```python
+# Conceptual Structure (based on standard ViT)
+VisionTransformer(
+  (patch_embed): PatchEmbed(...)
+  (pos_drop): Dropout(...)
+  (blocks): Sequential(
+    (0): Block(...) # Transformer Encoder Layer 1
+    (1): Block(...) # Transformer Encoder Layer 2
+    ...
+    (11): Block(...) # Transformer Encoder Layer 12
   )
-  (classifier): Linear(in_features=768, out_features=3, bias=True)
+  (norm): LayerNorm(...)
+  (head): Linear(in_features=768, out_features=3, bias=True) # Classifier
 )
-Vision Transformer with 12 encoder layers
 
-� Raspberry Pi Setup
-
-# Install ARM-compatible PyTorch
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-
-# Install dependencies
-sudo apt install v4l-utils python3-pyopencl
-pip3 install onnxruntime opencv-python-headless
-
-🤝 Contributing
-We welcome contributions! Please follow this workflow:
-
-Fork the repository
-
-Create your feature branch:
-
-git checkout -b feature/your-feature
-
-Commit changes:
-
-git commit -m 'Add awesome feature'
-
-Push to branch:
-
-git push origin feature/your-feature
-Open a pull request
-
-📜 License
-MIT License - see LICENSE for details
-
-🙏 Acknowledgments
-Vision Transformer architecture
-
-PyTorch framework
-
-OpenCV camera integration
