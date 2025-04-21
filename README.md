@@ -21,6 +21,66 @@ The model classifies palm oil fruit bunches into three categories:
 
 ---
 
+### ✨ Batch Analysis in Action ✨
+
+Beyond single samples, the included batch analysis script (`Save_Models/Scripts/analyze_palm_oil.py`) can process multiple test images located in `Captured_Images/Test/`. Here's a visual walkthrough of its execution:
+
+**1. System Initialization ⚙️**
+
+The script begins by setting up the environment, loading the trained model, and identifying the images in the test folder.
+
+![System Initialization Output](./Images/Initializing_System.jpg)
+
+---
+
+**2. Processing Test Images 🖼️➡️📊**
+
+Each image is then analyzed, and a detailed report is printed directly to the terminal. Below shows the actual test image alongside a snippet of the terminal output generated for it.
+
+* **Analysis of `test_image.jpg`**
+
+    ![Test Image 1](./Images/ImageOneProof.jpg)
+
+  *(Terminal Output Snippet)*
+  
+    ![Terminal Output for Image 1](./Images/Image1.jpg)
+
+* **Analysis of `test_image4.jpg`**
+
+    ![Test Image 2](./Images/ImageTwoProof.jpg)
+
+  *(Terminal Output Snippet)*
+  
+    ![Terminal Output for Image 2](./Images/Image2.jpg)
+
+* **Analysis of `test_image5.jpg`**
+
+    ![Test Image 3](./Images/ImageThreeProof.jpg)
+
+  *(Terminal Output Snippet)*
+  
+    ![Terminal Output for Image 3](./Images/Image3.jpg)
+
+* **Analysis of `test_image7.jpg`**
+
+    ![Test Image 4](./Images/ImageFourthProof.jpg)
+
+  *(Terminal Output Snippet)*
+  
+    ![Terminal Output for Image 4](./Images/Image4.jpg)
+
+---
+
+**3. Final Summary Report ✅**
+
+After processing all images, the script concludes by presenting a consolidated summary, showing overall statistics and counts for each ripeness category.
+
+![Summary Report Output](./Images/summary.jpg)
+
+This demonstrates the script's capability to efficiently analyze batches of images and provide detailed, immediate feedback directly in the terminal.
+
+---
+
 ## 📋 Table of Contents
 
 * [🌟 Features](#-features)
