@@ -5,6 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Profile Views](https://komarev.com/ghpvc/?username=Owono2001&style=for-the-badge&color=brightgreen)](https://github.com/Owono2001/)
 
+https://github.com/user-attachments/assets/a684b1ec-9e3c-4b73-8f02-4d0f54f10d20
+
+Youtube Video Link:
 https://www.youtube.com/watch?v=BUNYdUD6qEI
 
 > A Vision Transformer (ViT) based AI model for accurately classifying the ripeness of palm oil fruit bunches (Ripe, Unripe, Empty) using standard RGB camera images. This project achieves **99.96% validation accuracy** and supports real-time inference, including deployment on Raspberry Pi.
@@ -188,3 +191,4 @@ VisionTransformer(
   (norm): LayerNorm(...)
   (head): Linear(in_features=768, out_features=3, bias=True) # Classifier
 )
+
